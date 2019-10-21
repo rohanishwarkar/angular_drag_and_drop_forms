@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 10px;">
+  <div class="container">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Components
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="/forms/builder"><i class="fa fa-th-list"></i> Form Builder</a>
+            <a class="dropdown-item" routerLink="/manager"><i class="fa fa-folder-open-o"></i> Form Manager</a>
+          </div>
+        </li>
+        </ul>
+      <ul class="navbar-nav">        
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br>
+<div class="container container-demo">
+  <router-outlet></router-outlet>
+</div>
