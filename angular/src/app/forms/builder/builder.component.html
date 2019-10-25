@@ -1,0 +1,14 @@
+<form-builder [form]="form" (change)="onChange($event)"></form-builder>
+<form #userform="ngForm" (ngSubmit)="onSubmit(ngForm)" style="margin-top: 3em;" name="form">
+	<div class="row" *ngIf="showSucessMessage">
+		<p class="alert alert-success">
+			<strong>Form Saved Successfully!!</strong>
+		</p>
+	</div>
+	<div class="form-group">
+		<label>Form Name</label>
+		<input type="text" name="name" class="form-control" #name="ngModel"  [(ngModel)]="currForm.name" placeholder="Enter Form name">
+	</div>
+	<button class="btn btn-primary center-block" type="submit">Submit Form</button>
+</form>
+

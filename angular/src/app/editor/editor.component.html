@@ -1,0 +1,9 @@
+<form #userform="ngForm" (ngSubmit)="onSubmit(ngForm)" style="margin-top: 3em;">
+	<div class="form-group">
+		<label>Form Name</label>
+		<input type="text" name="name" class="form-control" #name="ngModel"  [(ngModel)]="selectedForm.name" placeholder="Enter Form name" required>
+	</div>
+	<button class="btn btn-primary center-block" type="submit">Finish</button>
+</form>
+	<br><br>
+<form-builder [form]='{components: components}' (change)="onChange($event)"></form-builder>

@@ -1,0 +1,24 @@
+<div class="table table-stripped">
+	<table class="responsive-table highlight">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Edit</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tr *ngFor="let th of formService.forms">
+			<td>{{th.name}}</td>
+			<td>
+				<a class="btn btn-info btn-sm" (click)="onEdit(th)">
+					<span class="glyphicon glyphicon-edit" ></span> Edit
+				</a>
+			</td>
+			<td>
+				<a href="javascript:void(0)" class="btn btn-info btn-sm" (click)="onDelete(th._id)">
+					<span class="glyphicon glyphicon-edit"></span> Delete
+				</a>
+			</td>
+		</tr>
+	</table>
+</div>
