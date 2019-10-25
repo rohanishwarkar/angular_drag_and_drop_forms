@@ -1,0 +1,42 @@
+<formio [form]='{
+    "title": "My Test Form",
+    "components": [
+    {
+        "label": "Name",
+        "placeholder": "Enter Name",
+        "validate": {
+            "required": true,
+            "minWords": 1,
+            "maxWords": 20,
+            "minLength": 1,
+            "maxLength": 20
+        },
+        "errorLabel": "Enter between 1 and 20 characters",
+        "key": "name",
+        "type": "textarea",
+        "rows": 1,
+        "input": true,
+        "autoExpand": false
+    },
+    {
+        "label": "Phone",
+        "placeholder": "Enter Phone Number",
+        "inputFormat": "plain",
+        "validate": {
+            "required": true
+        },
+        "errorLabel": "Enter Valid 10 digit number",
+        "key": "number",
+        "type": "textfield",
+        "input": true
+    },
+    {
+        "type": "button",
+        "label": "Submit",
+        "key": "submit",
+        "disableOnInvalid": true,
+        "input": true
+    }
+]
+}' (submit)="onSubmit($event)"></formio>
+<p>{{data}}</p>

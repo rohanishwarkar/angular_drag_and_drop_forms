@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { BuilderComponent } from './forms/builder/builder.component';
 import { FormComponent } from './form/form.component';
 import { EditorComponent } from './editor/editor.component';
+import { UserComponent } from './user/user.component';
 // Make sure we use fontawesome everywhere in Form.io renderers.
 const Formio = require('formiojs').Formio;
 Formio.icons = 'fontawesome';
@@ -30,6 +31,7 @@ Formio.icons = 'fontawesome';
     BuilderComponent,
     FormComponent,
     EditorComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +56,10 @@ Formio.icons = 'fontawesome';
       {
         path: 'manager/edit',
         component: EditorComponent,
+      },
+      {
+        path: 'user',
+        component:UserComponent,
       }
     ], {useHash: true})
   ],
